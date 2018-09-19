@@ -1,0 +1,33 @@
+footer{
+  background: #fff;
+}
+.docs-footer {
+  padding: 12px;
+  font-size: 12px;
+  margin-top: 40px;
+}
+
+.docs-footer-list {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 8px;
+}
+
+mat-toolbar {
+  background: #fff;
+  font-family: roboto;
+  span{
+    color: #222;
+    font-family: fanumiran, roboto, sans-serif;
+    font-size: 0.7em;
+    a{
+      text-decoration: none;
+      color: #666;
+    }
+    mat-icon{
+      vertical-align: text-top;
+    }
+  }
+}
+

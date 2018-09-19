@@ -1,0 +1,62 @@
+@import '~material-colors/dist/colors';
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
+}
+
+.searchbar {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-family: fanumiran;
+  line-height: 3.3em;
+  color: #fff;
+  width: 50em;
+  padding: 0 4em;
+
+  &::placeholder {
+    color: rgba(255, 255, 255, 0.75);
+    opacity: 1;
+  }
+
+  &:before {
+    @extend .material-icons;
+    content: 'lock';
+  }
+}
+
+mat-toolbar{
+  background: $md-green-a400;
+  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+
+.user_profile {
+
+  img{
+    border-radius: 50%;
+    width:2em;
+    height: 2em;
+    flex:0;
+    vertical-align: middle;
+  }
+}
+
+span{
+  font-size: 1em;
+  color: #fff;
+}
+
+* {
+  font-family: fanumiran;
+}

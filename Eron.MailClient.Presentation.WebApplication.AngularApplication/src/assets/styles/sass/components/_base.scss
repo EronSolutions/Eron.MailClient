@@ -1,0 +1,40 @@
+@import '~material-colors/dist/colors';
+body{
+  background: #f2f2f2;
+  color: #212121;
+  margin: 0;
+  font-family: 'iranyekan' ,roboto ,Arial;
+}
+
+app-root {
+  min-height: 100vh;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  > *:not(router-outlet) {
+    flex: 1;
+    display: block;
+  }
+}
+
+button{
+  span{
+    font-family: fanumiran;
+  }
+}
+
+mat-hint{
+  font-family: fanumiran;
+}
