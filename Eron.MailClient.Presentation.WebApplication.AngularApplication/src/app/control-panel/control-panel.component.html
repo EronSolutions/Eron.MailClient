@@ -1,3 +1,11 @@
 <app-header></app-header>
-<app-side></app-side>
-<router-outlet></router-outlet>
+
+
+<mat-drawer-container class="example-container">
+  <mat-drawer mode="side" [opened]="sideNavOpened">
+    <app-side></app-side>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>

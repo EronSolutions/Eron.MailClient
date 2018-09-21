@@ -1,13 +1,25 @@
 @import '~material-colors/dist/colors';
-body{
+body {
   background: #f2f2f2;
   color: #212121;
   margin: 0;
-  font-family: 'iranyekan' ,roboto ,Arial;
+  font-family: 'iranyekan', roboto, Arial;
 }
 
 app-root {
   min-height: 100vh;
+  display: flex;
+  flex: 1;
+}
+
+app-control-panel{
+  flex:1;
+}
+
+app-side{
+  padding: 1em 2em 0 0;
+  display: block;
+  box-sizing: border-box;
 }
 
 .page-wrap {
@@ -29,12 +41,91 @@ main {
   }
 }
 
-button{
-  span{
+button {
+  span {
     font-family: fanumiran;
   }
 }
 
-mat-hint{
+mat-hint {
   font-family: fanumiran;
+}
+
+* {
+  font-family: fanumiran, iranyekan, roboto, material-icons, sans-serif;
+}
+
+.m-t-md {
+  margin-top: 1em;
+}
+.m-b-md {
+  margin-bottom: 1em;
+}
+.m-r-md {
+  margin-right: 1em;
+}
+.m-l-md {
+  margin-left: 1em;
+}
+.p-t-md {
+  padding-top: 1em;
+}
+.p-b-md {
+  padding-bottom: 1em;
+}
+.p-r-md {
+  padding-right: 1em;
+}
+.p-l-md {
+  padding-left: 1em;
+}
+
+.m-t-lg {
+  margin-top: 3em;
+}
+.m-b-lg {
+  margin-bottom: 3em;
+}
+.m-r-lg {
+  margin-right: 3em;
+}
+.m-l-lg {
+  margin-left: 3em;
+}
+.p-t-lg {
+  padding-top: 3em;
+}
+.p-b-lg {
+  padding-bottom: 3em;
+}
+.p-r-lg {
+  padding-right: 3em;
+}
+.p-l-lg {
+  padding-left: 3em;
+}
+
+.m-t-sm {
+  margin-top: 0.5em;
+}
+.m-b-sm {
+  margin-bottom: 0.5em;
+}
+.m-r-sm {
+  margin-right: 0.5em;
+}
+.m-l-sm {
+  margin-left: 0.5em;
+}
+.p-t-sm {
+  padding-top: 0.5em;
+}
+.p-b-sm {
+  padding-bottom: 0.5em;
+}
+.p-r-sm {
+  padding-right: 0.5em;
+}
+.p-l-sm {
+  padding-left: 0.5em;
 }

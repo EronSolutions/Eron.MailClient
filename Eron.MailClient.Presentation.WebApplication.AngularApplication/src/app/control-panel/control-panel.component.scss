@@ -1,0 +1,20 @@
+mat-drawer {
+  width: 20em;
+  background: transparent !important;
+}
+
+mat-drawer-content {
+  padding: 1em;
+  background: transparent !important;
+}
+
+mat-drawer-container{
+  background: transparent !important;
+  min-height: calc(100vh - 96px);
+}
+
+// mat-drawer {
+//   position: relative;
+//   height: 100%;
+//   min-height: 100%;
+// }

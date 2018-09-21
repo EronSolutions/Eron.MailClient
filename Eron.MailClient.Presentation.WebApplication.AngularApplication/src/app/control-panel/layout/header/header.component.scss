@@ -12,47 +12,71 @@
   white-space: nowrap;
   word-wrap: normal;
   direction: ltr;
+  vertical-align: middle;
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 }
 
 .searchbar {
-  background: rgba(255, 255, 255, 0.1);
-  border: none;
-  font-family: fanumiran;
-  line-height: 3.3em;
-  color: #fff;
-  width: 50em;
-  padding: 0 4em;
+  input {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-family: fanumiran;
+    line-height: 3.3em;
+    color: #fff;
+    width: 44em;
+    padding: 0 4em;
 
-  &::placeholder {
-    color: rgba(255, 255, 255, 0.75);
-    opacity: 1;
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+    }
+
+    &::-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      color: rgba(255, 255, 255, 0.8);
+      opacity: 1;
+    }
+
+    &:hover {
+      border: none;
+    }
   }
 
-  &:before {
+  &::before {
     @extend .material-icons;
-    content: 'lock';
+    content: 'search';
+    color: $md-white;
+    position: absolute;
+    padding: 0.4em 0.5em;
   }
 }
 
-mat-toolbar{
-  background: $md-green-a400;
-  box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+mat-icon {
+  color: $md-white;
+}
+
+mat-toolbar {
+  background: $md-light-blue-a700;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.14), 0 4px 8px rgba(0, 0, 0, 0.28);
 }
 
 .user_profile {
-
-  img{
+  padding: 0 2em;
+  img {
     border-radius: 50%;
-    width:2em;
+    width: 2em;
     height: 2em;
-    flex:0;
+    flex: 0;
     vertical-align: middle;
   }
 }
 
-span{
+span {
   font-size: 1em;
   color: #fff;
 }
