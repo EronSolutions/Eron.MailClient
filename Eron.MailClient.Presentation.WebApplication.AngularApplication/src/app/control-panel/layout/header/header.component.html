@@ -1,6 +1,6 @@
 <mat-toolbar>
-  <a href="" class="m-l-md m-r-md"><mat-icon>menu</mat-icon></a>
-    <span>صندوق ورودی</span>
+  <a class="m-l-md m-r-md"><mat-icon>menu</mat-icon></a>
+  <span>صندوق ورودی</span>
   <span class="filler"></span>
 
   <div class="searchbar">
@@ -8,6 +8,11 @@
   </div>
 
   <span class="filler"></span>
-  <a class="user_profile"><img src="/assets/img/a1.jpg"/></a>
-
+  <a  [matMenuTriggerFor]="menu" class="user_profile"><img src="/assets/img/a1.jpg"/></a>
+  <mat-menu #menu="matMenu" [yPosition]="'below'" [xPosition]="'before'" overlapTrigger="true" class="user_menu">
+      <button mat-menu-item>مدیریت اکانت ها</button>
+      <button mat-menu-item>اطلاعات کاربری</button>
+      <mat-divider></mat-divider>
+      <button mat-menu-item>خروج</button>
+  </mat-menu>
 </mat-toolbar>

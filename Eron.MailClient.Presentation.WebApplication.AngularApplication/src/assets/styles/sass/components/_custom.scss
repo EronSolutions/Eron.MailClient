@@ -1,3 +1,16 @@
 .filler{
   flex: 1 1 auto;
 }
+
+.user_menu{
+  top: 3.2em !important;
+  position: relative;
+  .mat-menu-content {
+    min-width:10em;
+  }
+
+  *{
+    font-size: 0.9em;
+  }
+
+}
