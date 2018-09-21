@@ -1,3 +1,4 @@
+@import '~material-colors/dist/colors';
 mat-list-item {
   button{
     text-align: right;
@@ -8,4 +9,20 @@ mat-list-item {
       vertical-align: text-top;
     }
   }
+}
+
+.clock-icon {
+  color: $md-orange-700;
+}
+
+.inbox-icon {
+  color: $md-blue-900;
+}
+
+.check-icon{
+  color: $md-green-700;
+}
+
+.default-icon {
+  color: $md-grey-700;
 }
