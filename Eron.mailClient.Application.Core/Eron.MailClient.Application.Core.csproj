@@ -41,7 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationSettings.cs" />
+    <Compile Include="Entities\MailConfiguration.cs" />
     <Compile Include="Enums\EmailDefaultFolderType.cs" />
+    <Compile Include="Infrastructure\BaseEntity.cs" />
+    <Compile Include="Infrastructure\Entity.cs" />
+    <Compile Include="Infrastructure\IBaseEntity.cs" />
+    <Compile Include="Infrastructure\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
