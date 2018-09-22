@@ -41,7 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ApplicationSettings.cs" />
-    <Compile Include="Entities\MailConfiguration.cs" />
+    <Compile Include="Entities\MailAccountConfiguration.cs" />
     <Compile Include="Enums\EmailDefaultFolderType.cs" />
     <Compile Include="Infrastructure\BaseEntity.cs" />
     <Compile Include="Infrastructure\Entity.cs" />
