@@ -23,9 +23,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eron.MailClient.DataAccess.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eron.MailClient.Business.Core", "Eron.MailClient.Business.Core\Eron.MailClient.Business.Core.csproj", "{E0A9D0C3-5FB8-4529-AB41-76AD9E2AF9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eron.MailClient.Presentation.WebApplication.WebApi", "Eron.MailClient.Presentation.WebApplication.WebApi\Eron.MailClient.Presentation.WebApplication.WebApi.csproj", "{B52530C4-1D4B-4703-B6BD-19C4E5999314}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eron.MailClient.Presentation.WebApplication.AngularApplication", "Eron.MailClient.Presentation.WebApplication.AngularApplication\Eron.MailClient.Presentation.WebApplication.AngularApplication.csproj", "{3E6A3B9E-E04F-4E1F-AA1E-006644AC3DA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eron.MailClient.Presentation.WebApplication.WebApi", "Eron.MailClient.Presentation.WebApplication.WebApi\Eron.MailClient.Presentation.WebApplication.WebApi.csproj", "{62FDC4EC-4FE8-40ED-A567-18819679204A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,13 +53,13 @@ Global
 		{E0A9D0C3-5FB8-4529-AB41-76AD9E2AF9B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0A9D0C3-5FB8-4529-AB41-76AD9E2AF9B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0A9D0C3-5FB8-4529-AB41-76AD9E2AF9B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B52530C4-1D4B-4703-B6BD-19C4E5999314}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B52530C4-1D4B-4703-B6BD-19C4E5999314}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B52530C4-1D4B-4703-B6BD-19C4E5999314}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B52530C4-1D4B-4703-B6BD-19C4E5999314}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3E6A3B9E-E04F-4E1F-AA1E-006644AC3DA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3E6A3B9E-E04F-4E1F-AA1E-006644AC3DA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E6A3B9E-E04F-4E1F-AA1E-006644AC3DA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62FDC4EC-4FE8-40ED-A567-18819679204A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62FDC4EC-4FE8-40ED-A567-18819679204A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62FDC4EC-4FE8-40ED-A567-18819679204A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62FDC4EC-4FE8-40ED-A567-18819679204A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,7 +70,7 @@ Global
 		{687C14F9-6F62-4833-BA34-BC8CFBC95CFB} = {73BFD1E4-56D3-4927-8BD8-7ADEA5DCF19B}
 		{ED2C9B49-29FA-4126-A03A-B60E90C42580} = {02D064DC-0A69-4C64-A456-FEB7F84C292B}
 		{E0A9D0C3-5FB8-4529-AB41-76AD9E2AF9B6} = {0C4D4A26-B88F-4390-91D5-A39487A85B88}
-		{B52530C4-1D4B-4703-B6BD-19C4E5999314} = {4699F2CA-A9EA-4370-BDF2-83578D725274}
 		{3E6A3B9E-E04F-4E1F-AA1E-006644AC3DA6} = {4699F2CA-A9EA-4370-BDF2-83578D725274}
+		{62FDC4EC-4FE8-40ED-A567-18819679204A} = {4699F2CA-A9EA-4370-BDF2-83578D725274}
 	EndGlobalSection
 EndGlobal

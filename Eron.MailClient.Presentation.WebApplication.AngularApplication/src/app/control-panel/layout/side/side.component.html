@@ -1,19 +1,37 @@
 <mat-list>
-    <mat-list-item *ngFor="let folder of folders">
-        <!--  -->
-        <button mat-line mat-button>
-          <mat-icon color="accent">inbox</mat-icon>
-          {{folder.name}}
-        </button>
-        <!-- <p mat-line> {{note.updated | date}} </p> -->
-      </mat-list-item>
-    <mat-divider></mat-divider>
-    <mat-list-item *ngFor="let folder of folders">
-      <!--  -->
-      <button mat-line mat-button>
-        <mat-icon color="primary">note</mat-icon>
-        {{folder.name}}
-      </button>
-      <!-- <p mat-line> {{note.updated | date}} </p> -->
-    </mat-list-item>
-  </mat-list>
+  <mat-list-item>
+    <!--  -->
+    <button mat-line mat-button>
+      <mat-icon class="inbox-icon">inbox</mat-icon>
+      صندوق ورودی
+    </button>
+    <!-- <p mat-line> {{note.updated | date}} </p> -->
+  </mat-list-item>
+
+  <mat-list-item>
+    <!--  -->
+    <button mat-line mat-button>
+      <mat-icon class="check-icon">check</mat-icon>
+      انجام شده
+    </button>
+    <!-- <p mat-line> {{note.updated | date}} </p> -->
+  </mat-list-item>
+
+  <mat-list-item>
+    <!--  -->
+    <button mat-line mat-button>
+      <mat-icon class="clock-icon">access_time</mat-icon>
+      یادآوری کن
+    </button>
+    <!-- <p mat-line> {{note.updated | date}} </p> -->
+  </mat-list-item>
+  <mat-divider></mat-divider>
+  <mat-list-item *ngFor="let folder of folders">
+    <!--  -->
+    <button mat-line mat-button>
+      <mat-icon class="default-icon">folder</mat-icon>
+      {{folder.name}}
+    </button>
+    <!-- <p mat-line> {{note.updated | date}} </p> -->
+  </mat-list-item>
+</mat-list>
