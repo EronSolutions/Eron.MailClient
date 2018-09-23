@@ -7,6 +7,7 @@ using System.Web.Http;
 
 namespace Eron.MailClient.Presentation.WebApplication.WebApi.Controllers
 {
+    [Authorize]
     public class ValuesController : ApiController
     {
         // GET api/values
