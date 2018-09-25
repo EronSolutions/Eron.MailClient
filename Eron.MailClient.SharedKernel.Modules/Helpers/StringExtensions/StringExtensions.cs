@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Text.RegularExpressions;
 
-namespace Eron.MailClient.SharedKernel.Modules.Helpers.StringExtensions
+// ReSharper disable once CheckNamespace
+namespace System
 {
     public static class StringExtensions
     {

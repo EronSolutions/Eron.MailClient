@@ -10,6 +10,8 @@ using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.OAuth;
 using Eron.MailClient.Presentation.WebApplication.WebApi.Models;
+using hbehr.recaptcha;
+using hbehr.recaptcha.Exceptions;
 
 namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
 {
@@ -29,13 +31,32 @@ namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
 
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
+            var data = await context.Request.ReadFormAsync();
+            string userResponse = data["recaptcha"];
+
+            try
+            {
+                bool validCaptcha = ReCaptcha.ValidateCaptcha(userResponse);
+                if (!validCaptcha || userResponse.IsNullOrWhiteSpace())
+                {
+                    // Bot Attack, non validated !
+                    throw new ReCaptchaException();
+                }
+            }
+            catch
+            {
+                context.SetError("مجوز نامعتبر", "فیلد 'من ربات نیستم' صحیح نیست. لطفا مجددا تلاش کنید");
+                return;
+            }
+
+
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
             ApplicationUser user = await userManager.FindAsync(context.UserName, context.Password);
 
             if (user == null)
             {
-                context.SetError("invalid_grant", "The user name or password is incorrect.");
+                context.SetError("مجوز نامعتبر", "نام کاربری یا رمز عبور اشتباه است");
                 return;
             }
 
