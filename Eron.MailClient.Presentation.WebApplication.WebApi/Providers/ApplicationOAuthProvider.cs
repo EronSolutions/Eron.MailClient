@@ -12,6 +12,7 @@ using Microsoft.Owin.Security.OAuth;
 using Eron.MailClient.Presentation.WebApplication.WebApi.Models;
 using hbehr.recaptcha;
 using hbehr.recaptcha.Exceptions;
+using Microsoft.Owin;
 
 namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
 {
@@ -32,23 +33,8 @@ namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
         public override async Task GrantResourceOwnerCredentials(OAuthGrantResourceOwnerCredentialsContext context)
         {
             var data = await context.Request.ReadFormAsync();
-            string userResponse = data["recaptcha"];
-
-            try
-            {
-                bool validCaptcha = ReCaptcha.ValidateCaptcha(userResponse);
-                if (!validCaptcha || userResponse.IsNullOrWhiteSpace())
-                {
-                    // Bot Attack, non validated !
-                    throw new ReCaptchaException();
-                }
-            }
-            catch
-            {
-                context.SetError("مجوز نامعتبر", "فیلد 'من ربات نیستم' صحیح نیست. لطفا مجددا تلاش کنید");
+            if (!ValidateCaptchaCode(data["recaptcha"], context))
                 return;
-            }
-
 
             var userManager = context.OwinContext.GetUserManager<ApplicationUserManager>();
 
@@ -115,5 +101,29 @@ namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
             };
             return new AuthenticationProperties(data);
         }
+
+        #region helpers
+
+        private bool ValidateCaptchaCode(string userResponse, OAuthGrantResourceOwnerCredentialsContext context)
+        {
+
+            try
+            {
+                bool validCaptcha = ReCaptcha.ValidateCaptcha(userResponse);
+                if (!validCaptcha || userResponse.IsNullOrWhiteSpace())
+                {
+                    // Bot Attack, non validated !
+                    throw new ReCaptchaException();
+                }
+                return true;
+            }
+            catch
+            {
+                context.SetError("مجوز نامعتبر", "فیلد 'من ربات نیستم' صحیح نیست. لطفا مجددا تلاش کنید");
+                return false;
+            }
+        }
+
+        #endregion
     }
 }
