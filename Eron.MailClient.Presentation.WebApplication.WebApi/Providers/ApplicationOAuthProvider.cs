@@ -12,7 +12,6 @@ using Microsoft.Owin.Security.OAuth;
 using Eron.MailClient.Presentation.WebApplication.WebApi.Models;
 using hbehr.recaptcha;
 using hbehr.recaptcha.Exceptions;
-using Microsoft.Owin;
 
 namespace Eron.MailClient.Presentation.WebApplication.WebApi.Providers
 {
